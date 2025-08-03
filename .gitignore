@@ -2,3 +2,4 @@
 *.xlsx
 !day5.ipynb
 .DS_Store
+**/**/node_modules
