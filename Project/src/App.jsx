@@ -1,6 +1,16 @@
 import { MapContainer, Marker, Popup, TileLayer, useMap } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import { useEffect, useState } from "react";
+import Project from "./Project";
+
+function App() {
+  return (
+    <>
+      <Project />
+    </>
+  );
+}
+export default App;
 
 function BoxContainer({ children }) {
   return <div className="container start-align">{children}</div>;
@@ -49,16 +59,6 @@ function Section({ title = "", children }) {
         }}
       />
     </div>
-  );
-}
-
-export default App;
-
-function App() {
-  return (
-    <>
-      <MilestoneFour />
-    </>
   );
 }
 
@@ -160,56 +160,56 @@ const Recenter = ({ latitude, longitude }) => {
   return null;
 };
 
-// function MilestoneOne() {
-//   return (
-//     <PageLayout>
-//       <Title titleText={"The App"} />
-//       <BoxContainer>
-//         <Section title="📍 Search Location">
-//           <TextInput />
-//         </Section>
-//       </BoxContainer>
-//     </PageLayout>
-//   );
-// }
+function MilestoneOne() {
+  return (
+    <PageLayout>
+      <Title titleText={"The App"} />
+      <BoxContainer>
+        <Section title="📍 Search Location">
+          <TextInput />
+        </Section>
+      </BoxContainer>
+    </PageLayout>
+  );
+}
 
-// function MilestoneTwo() {
-//   return (
-//     <PageLayout>
-//       <Title titleText={"The App"} />
-//       <BoxContainer>
-//         <Section title="📍 Search Location">
-//           <TextInput />
-//         </Section>
-//         <Section title="🌍 Location Map">
-//           <Map />
-//         </Section>
-//       </BoxContainer>
-//     </PageLayout>
-//   );
-// }
+function MilestoneTwo() {
+  return (
+    <PageLayout>
+      <Title titleText={"The App"} />
+      <BoxContainer>
+        <Section title="📍 Search Location">
+          <TextInput />
+        </Section>
+        <Section title="🌍 Location Map">
+          <Map />
+        </Section>
+      </BoxContainer>
+    </PageLayout>
+  );
+}
 
-// function MilestoneThree() {
-//   const sciTech = [26.3192, 50.2279];
-//   return (
-//     <PageLayout>
-//       <Title titleText={"The App"} />
-//       <BoxContainer>
-//         <Section title="📍 Search Location">
-//           <TextInput />
-//         </Section>
-//         <Section title="🌍 Location Map">
-//           <Map />
-//         </Section>
-//         <Section>
-//           ⛅ <strong className="location-name">Location</strong> Weather
-//           <WeatherDashboard latitude={sciTech[0]} longitude={sciTech[1]} />
-//         </Section>
-//         <Footer developerName={"Ali Aljaffer"} />
-//       </BoxContainer>
-//     </PageLayout>
-//   );
-// }
+function MilestoneThree() {
+  const sciTech = [26.3192, 50.2279];
+  return (
+    <PageLayout>
+      <Title titleText={"The App"} />
+      <BoxContainer>
+        <Section title="📍 Search Location">
+          <TextInput />
+        </Section>
+        <Section title="🌍 Location Map">
+          <Map />
+        </Section>
+        <Section>
+          ⛅ <strong className="location-name">Location</strong> Weather
+          <WeatherDashboard latitude={sciTech[0]} longitude={sciTech[1]} />
+        </Section>
+        <Footer developerName={"Ali Aljaffer"} />
+      </BoxContainer>
+    </PageLayout>
+  );
+}
 
 function MilestoneFour() {
   const sciTech = [26.3192, 50.2279];

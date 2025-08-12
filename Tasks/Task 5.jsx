@@ -63,6 +63,7 @@ function App() {
       >
         {joke}
       </p>
+      <p>Refresh your browser for another!</p>
     </div>
   );
 }
