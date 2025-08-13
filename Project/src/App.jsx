@@ -6,7 +6,7 @@ import Project from "./Project";
 function App() {
   return (
     <>
-      <Project />
+      <MilestoneFour />
     </>
   );
 }
